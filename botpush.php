@@ -14,13 +14,13 @@ $access_token = '56cmfN/YZ1EOlLZRmhEjOu3T79iCRhfB2pt3poy2fYKe6I82RVZrjzyFT0wsBdp
 
 $channelSecret = '32a8d7b23f2069e49c3456c67eb550e6';
 
-$pushID = 'Uea7d57cf9edb76bee9807e6cebbe26bc';
+$pushID = 'U2a0f35b0fd0815ed893c377c1f380329';
 
 
 $httpClient = new \LINE\LINEBot\HTTPClient\CurlHTTPClient($access_token);
 $bot = new \LINE\LINEBot($httpClient, ['channelSecret' => $channelSecret]);
 
-$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('hello world');
+$textMessageBuilder = new \LINE\LINEBot\MessageBuilder\TextMessageBuilder('ทดสอบส่งข้อความด้วย Line Bot API');
 $response = $bot->pushMessage($pushID, $textMessageBuilder);
 
 echo $response->getHTTPStatus() . ' ' . $response->getRawBody();
